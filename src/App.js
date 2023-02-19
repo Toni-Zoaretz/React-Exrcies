@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useRef } from "react";
+import img1 from "./assets/1111-modified.jpg";
+import img2 from "./assets/2222-modified.jpg";
+import img3 from "./assets/1111.jpg";
+import img4 from "./assets/2222.jpg";
 function App() {
+  const imgRel1 = useRef(null);
+  const imgRel2 = useRef(null);
+  // console.log(imgRel);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>hi bro!</h1>
+      <img
+        src={img1}
+        alt="img"
+        ref={imgRel1}
+        onMouseOver={() => (imgRel1.current.src = img3)}
+        onMouseLeave={() => (imgRel1.current.src = img1)}
+      />
+      <img
+        src={img2}
+        alt="img2"
+        ref={imgRel2}
+        onMouseOver={() => (imgRel2.current.src = img4)}
+        onMouseLeave={() => (imgRel2.current.src = img2)}
+      />
     </div>
   );
 }
