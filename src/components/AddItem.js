@@ -11,7 +11,6 @@ function AddItem() {
       return [];
     }
   });
-  // const [show, setShow] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
