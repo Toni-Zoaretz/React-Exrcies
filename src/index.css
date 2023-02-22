@@ -14,10 +14,6 @@ h1 {
   padding: 1rem;
 }
 
-.title {
-  border: 1px solid rgb(250, 140, 159);
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -41,4 +37,12 @@ input {
 
 label {
   font-weight: 500;
+}
+
+.todoBox {
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
